@@ -78,9 +78,20 @@ var receiveData = function(slack, bot, data) {
 
       }
       if (reply) {
-        channel.send(reply);
+        msgpack = {
+          text: reply,
+          icon_url: "http://laorquesta.mx/wp-content/uploads/2014/12/bikers-300x225.jpg",
+          attachment: {
+            "color": "#36a64f",
+            "title": "drifter bot",
+            "title_link": "http://superscriptjs.com/starter/quickstart"
+          }
+        }
+        // console.log("reply is a ", typeof(reply))
+        console.warn("msgpack:", msgpack);
+        channel.send(msgpack);
       }
-        
+
     });
 
   } else if (messageData.channel[0] == "D") {
