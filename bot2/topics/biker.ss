@@ -6,32 +6,50 @@
   // filter example
 
   + look
-  - {^hasItem(bikerAngry, true)} he seems angry. Better check your wallet is safe.
+  - {^hasItem(bikerAngry, true)} he seems angry.
   - {^hasItem(bikerAngry, false)} he seems pretty chill.
 
-  ? (can|chillould) you help me
+  + (hi|hello)
+  - what do you want? {@look}
+
+  ? (can|could) you help me
   - Whats in it for me? {topic=bikerDeal}
+
+  ? would you help me
+  - would I? what does that mean.
 
   ? can you (*)
   - Why should I <cap>?
 
+  + punch
+  - ^save(bikerAngry, true) he punches you back
+  ^ {@look}
 
   + (punch|hit|kick|bite) biker
-  - he punches you back ^save(bikerAngry, true)
+  - {@punch}
 
   + give [biker] [a] (*)
-  - Thanks for the <cap> man! ^save(bikerAngry)
+  - ^save(bikerAngry, false) Thanks for the <cap> man! {@look}
+
+  + kiss [biker] (*)
+  // - "Hey dont get fresh with me!" ^save(bikerAngry, true)
+  - Hey dont get fresh with me 
+  ^ ^save(bikerAngry, true)
+  ^ {@look}
 
   + give [biker] sandwich
-  - wow i'm really hungry, thanks!  ^save(bikerAngry, "")
+  - ^save(bikerAngry, false) wow i'm really hungry, thanks!
 
   + talk *
-  - {@look}
+  - biker: what do ya want? 
+  ^ {@look}
 
   + help
-  - why not talk to the biker?
+  - hint: why not talk to the biker?
 
 < topic
+
+
 
 > topic bikerDeal
 
@@ -39,3 +57,5 @@
   - You try and make a deal with the biker.
 
 < topic
+
+
