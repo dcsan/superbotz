@@ -6,6 +6,8 @@ var superscript     = require("superscript");
 var options = {};
 var sockets = [];
 
+var lastTopic = null;
+
 var botHandle = function(err, bot) {
 
   var receiveData = function(socket, bot, data) {
@@ -35,7 +37,17 @@ var botHandle = function(err, bot) {
       if (bot.scope.user) {   // sometimes this is undefined
         msg.currentTopic = bot.scope.user.currentTopic
         msg.pendingTopic = bot.scope.user.pendingTopic
+        msg.memory = bot.scope.user.memory
       }
+
+      if (msg.currentTopic != lastTopic) {
+        msg.newTopic = true;
+        lastTopic = msg.currentTopic;
+        console.log("newTopic:", msg.currentTopic);
+      } else {
+        msg.newTopic = false;
+      }
+
 
       console.log(reply + "\n");
       console.log("msg", msg);
