@@ -1,6 +1,6 @@
 > topic street
 
-  + *
+  + look
   - Out in the street.
 
   + description

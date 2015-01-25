@@ -15,7 +15,7 @@
   - "Don't pretend. You know what I'm talking about!"
 
   // is there an order eg fallthru to last option?
-  + [*]
+  + huh
   - pay attention! {@askticket}
   - "hey! I'm talking to you!" {@askticket}
 
@@ -26,10 +26,10 @@
 > topic ticket includes inspector
 
   + I lost [*]
-  - "you lost your ticket?" {@getoff}
+  - you lost your ticket? {@getoff}
 
-  + *
-  - So? {@getoff}
+  + can [you] *
+  - What? {@getoff}
 
   + getoff
   - You have to get off the train then {topic=street}
