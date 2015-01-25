@@ -17,10 +17,10 @@
   - Why should I <cap>?
 
   + [punch|hit] biker
-  - he punches you back ^save(bikerAngry: "true")
+  - he punches you back ^save(bikerAngry, true)
 
   + give *
-  - Thanks man! ^save(bikerAngry: "false")
+  - Thanks man! ^save(bikerAngry, false)
 
 
   + talk *
