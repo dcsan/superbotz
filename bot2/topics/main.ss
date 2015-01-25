@@ -6,6 +6,9 @@
 
   + (go|talk to) street
   - {topic=street}
+
+  + (go|talk to) drifter
+  - {topic=drifter}
 < pre
 
 
@@ -37,6 +40,9 @@
 
 + go * biker
 - you see a biker. {topic=biker}
+
++ go * drifter
+- you see a homeless drifter. {topic=drifter}
 
 + look
 - you're lost on a train in the middle of nowhere.
