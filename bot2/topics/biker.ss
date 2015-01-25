@@ -1,12 +1,12 @@
 > topic biker
 
   + [go] street
-  - you go back into the street. {topic=street}
+  - you go back into the street. {topic=street} {^save(bikerHappy, true)}
 
   // filter example
 
   + look
-  - {^hasItem(bikerAngry)} he seems angry. Better check your wallet is safe.
+  - {^hasItem(bikerAngry, true)} he seems angry. Better check your wallet is safe.
   - {^hasItem(bikerAngry, false)} he seems pretty chill.
 
   ? (can|could) you help me
@@ -18,8 +18,11 @@
   + [punch|hit|kick|bite] biker
   - he punches you back ^save(bikerAngry, true)
 
-  + give *
-  - Thanks man! ^save(bikerAngry, false)
+  + give [biker] [a] (*)
+  - Thanks for the <cap> man! ^save(bikerAngry)
+
+  + give [biker] sandwich
+  - wow i'm really hungry, thanks!  ^save(bikerAngry, "")
 
   + talk *
   - {@look}

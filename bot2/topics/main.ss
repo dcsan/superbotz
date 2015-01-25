@@ -9,6 +9,14 @@
 < pre
 
 
+> post 
+
+  + *
+  - wildcard here. wassup
+
+< post
+
+
 + go start
 - You wake up on a train in the middle of nowhere {topic=random}
 

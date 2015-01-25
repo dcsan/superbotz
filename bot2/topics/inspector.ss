@@ -28,12 +28,6 @@
 
 < topic
 
-> post 
-
-  + *
-  - wildcard here. wassup
-
-< post
 
 // ------ ticket -----------
 
