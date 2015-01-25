@@ -19,7 +19,8 @@ var factSystem = facts.explore("botfacts");
 // direct - sents a DM
 // atReply - sents a channel message with @username
 // public sends a channel reply with no username
-var replyType = "atReply"; 
+// var replyType = "atReply"; 
+var replyType = "public"; 
 
 var atReplyRE = /<@(.*?)>/;
 var options = {};
@@ -57,9 +58,10 @@ var receiveData = function(slack, bot, data) {
   var message = "" + messageData.text.trim();
   
   var match = message.match(atReplyRE)
-  
+  var LURKMODE = true;  // reply to all
+
   // Are they talking to us?
-  if (match && match[1] === slack.self.id) {
+  if (match && match[1] === slack.self.id || LURKMODE) {
 
     bot.reply(user.name, message, function(err, reply){
       // We reply back direcly to the user

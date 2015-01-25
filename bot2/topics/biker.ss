@@ -9,6 +9,9 @@
   - {^hasItem(bikerAngry, true)} he seems angry.
   - {^hasItem(bikerAngry, false)} he seems pretty chill.
 
+  + pic
+  - <img src="http://laorquesta.mx/wp-content/uploads/2014/12/bikers-300x225.jpg"/>
+
   + (hi|hello)
   - what do you want? {@look}
 
@@ -26,7 +29,8 @@
   ^ {@look}
 
   + (punch|hit|kick|bite) biker
-  - {@punch}
+  // - {@punch}
+  - ^save(bikerAngry, true) he punches you back {@look}
 
   + give [biker] [a] (*)
   - ^save(bikerAngry, false) Thanks for the <cap> man! {@look}
