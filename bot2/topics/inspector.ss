@@ -37,7 +37,7 @@
 
 // ------ ticket -----------
 
-> topic ticket includes inspector
+> topic ticket
 
   + I lost [*]
   - you lost your ticket? {@getoff}

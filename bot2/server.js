@@ -27,13 +27,13 @@ var botHandle = function(err, bot) {
       var i = sockets.indexOf(socket);
       var soc = sockets[i];
 
-      console.log("reply:", reply)
-      console.log("bot:", bot)
+      // console.log("reply:", reply)
+      // console.log("bot:", bot)
 
-      msg = {
-        reply: reply,
-        message: bot.scope.message.raw
-      }
+      // msg = {
+      //   reply: reply,
+      //   message: bot.scope.message.raw
+      // }
 
       // if (bot.scope.user) {   // sometimes this is undefined
       //   // console.log(bot.scope.user)
@@ -50,8 +50,8 @@ var botHandle = function(err, bot) {
       //   msg.newTopic = false;
       // }
 
-      console.log(reply + "\n");
-      console.log("msg", msg);
+      // console.log(reply + "\n");
+      // console.log("msg", msg);
 
       // soc.write(JSON.stringify(msg) + "\n")
       soc.write("\nBot> " + reply + "\n");

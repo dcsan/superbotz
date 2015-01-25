@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "superscript": "^0.4.5",
+    "debug": "^2.0.0",
     "sfacts": "latest",
-    "debug": "~2.0.0"
+    "superscript": "^0.4.5"
   },
   "scripts": {
     "start": "node server.js"
