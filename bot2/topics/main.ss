@@ -2,7 +2,7 @@
 
 > pre
   + (go|talk to) biker
-  - {topic=biker}
+  - {topic=biker} {@look}
 
   + (go|talk to) street
   - {topic=street}
