@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "superscript": "^0.4.3",
+    "superscript": "^0.4.5",
     "sfacts": "latest",
     "debug": "~2.0.0"
   },

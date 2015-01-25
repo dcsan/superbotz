@@ -9,7 +9,7 @@ exports.dcget = function(key, cb) {
   // debug("getVar", key, userId);
   
   memory.db.get({subject:key, predicate: userId}, function resultHandle(err, res){
-    console.log("get");
+    console.log("dcget");
     if (res && res.length != 0) {
       cb(err, res[0].object);
     } else {

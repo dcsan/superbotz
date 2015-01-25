@@ -6,8 +6,8 @@
   // filter example
 
   + look
-  - {^dcget(bikerAngry)} he seems angry. Better check your wallet is safe.
-  - {^dcget(bikerAngry)} he seems pretty chill. 
+  - {^hasItem(bikerAngry)} he seems angry. Better check your wallet is safe.
+  - {^hasItem(bikerAngry, false)} he seems pretty chill.
 
   ? (can|could) you help me
   - Whats in it for me? {topic=bikerDeal}
@@ -15,12 +15,11 @@
   ? can you (*)
   - Why should I <cap>?
 
-  + [punch|hit] biker
+  + [punch|hit|kick|bite] biker
   - he punches you back ^save(bikerAngry, true)
 
   + give *
   - Thanks man! ^save(bikerAngry, false)
-
 
   + talk *
   - {@look}
@@ -32,5 +31,7 @@
 
 > topic bikerDeal
 
+  + look
+  - You try and make a deal with the biker.
 
 < topic

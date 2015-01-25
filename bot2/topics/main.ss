@@ -1,3 +1,13 @@
+// pre runs first to catch any "go" change topic commands
+
+> pre
+  + (go|talk to) biker
+  - {topic=biker}
+
+  + (go|talk to) street
+  - {topic=street}
+< pre
+
 
 + go start
 - You wake up on a train in the middle of nowhere {topic=random}
