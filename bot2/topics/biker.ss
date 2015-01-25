@@ -22,8 +22,8 @@
   - Why should I <cap>?
 
   + punch
-  - he punches you back ^save(bikerAngry, true) {@look}
-  // ^ {@look}
+  - ^save(bikerAngry, true) he punches you back
+  ^ {@look}
 
   + (punch|hit|kick|bite) biker
   - {@punch}
