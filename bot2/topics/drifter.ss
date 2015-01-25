@@ -26,4 +26,7 @@
 	+ [Can] [I] give [you] [a] (*)
 	- ^save(drifterAngry, true) A <cap>! what the hell am I supposed to do with that
 
+	+ give money
+	- ^save(drifterAngry, false) Nice! now I'll get something to eat!
+	^ what can i help you with
 < topic
