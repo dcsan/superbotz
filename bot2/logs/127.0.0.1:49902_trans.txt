@@ -1,0 +1,9 @@
+Sat Jan 24 2015 21:05:18 GMT-0800 (PST) (user) ~emohello 
+Sat Jan 24 2015 21:05:19 GMT-0800 (PST) (bot) Ola 
+Sat Jan 24 2015 21:05:22 GMT-0800 (PST) (user) next 
+Sat Jan 24 2015 21:05:23 GMT-0800 (PST) (user) ready 
+Sat Jan 24 2015 21:05:23 GMT-0800 (PST) (bot) accident 
+Sat Jan 24 2015 21:05:27 GMT-0800 (PST) (user) ready 
+Sat Jan 24 2015 21:05:27 GMT-0800 (PST) (bot) beach 
+Sat Jan 24 2015 21:05:29 GMT-0800 (PST) (user) ready 
+Sat Jan 24 2015 21:05:29 GMT-0800 (PST) (bot) doctor 

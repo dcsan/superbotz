@@ -1,0 +1,8 @@
+Sat Jan 24 2015 23:01:44 GMT-0800 (PST) (user) ~emohello 
+Sat Jan 24 2015 23:01:44 GMT-0800 (PST) (bot) wheres your ticket? 
+Sat Jan 24 2015 23:01:49 GMT-0800 (PST) (user) k 
+Sat Jan 24 2015 23:01:49 GMT-0800 (PST) (bot) "hey! I'm talking to you!" 
+Sat Jan 24 2015 23:01:59 GMT-0800 (PST) (user) wot 
+Sat Jan 24 2015 23:01:59 GMT-0800 (PST) (bot) "hey! I'm talking to you!" 
+Sat Jan 24 2015 23:02:03 GMT-0800 (PST) (user) ~yes 
+Sat Jan 24 2015 23:02:03 GMT-0800 (PST) (bot) You, wake up! 

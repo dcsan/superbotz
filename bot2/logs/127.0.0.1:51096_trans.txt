@@ -1,0 +1,4 @@
+Sat Jan 24 2015 17:08:17 GMT-0800 (PST) (user) sup 
+Sat Jan 24 2015 17:08:17 GMT-0800 (PST) (bot) not much 
+Sat Jan 24 2015 17:08:21 GMT-0800 (PST) (user) go home 
+Sat Jan 24 2015 17:08:21 GMT-0800 (PST) (bot) ok, lets go! 

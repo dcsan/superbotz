@@ -1,0 +1,6 @@
+Sun Jan 25 2015 00:00:29 GMT-0800 (PST) (user) ~emohello 
+Sun Jan 25 2015 00:00:29 GMT-0800 (PST) (bot) Yeah? Whaddaya want? 
+Sun Jan 25 2015 00:00:37 GMT-0800 (PST) (user) street 
+Sun Jan 25 2015 00:00:37 GMT-0800 (PST) (bot) you go back into the street. 
+Sun Jan 25 2015 00:00:41 GMT-0800 (PST) (user) who 
+Sun Jan 25 2015 00:00:41 GMT-0800 (PST) (bot) Yeah? Whaddaya want? 

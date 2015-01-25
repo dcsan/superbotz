@@ -1,0 +1,5 @@
+Sat Jan 24 2015 21:43:47 GMT-0800 (PST) (user) t . 
+Sat Jan 24 2015 21:43:47 GMT-0800 (PST) (bot) youre driving when suddenly... you run over a Girls dog. Do you stop? 
+Sat Jan 24 2015 21:43:47 GMT-0800 (PST) (user) girl 
+Sat Jan 24 2015 21:43:50 GMT-0800 (PST) (user) ~yes 
+Sat Jan 24 2015 21:43:50 GMT-0800 (PST) (bot) How nice. She comes to talk to you, and you realize shes blind. 

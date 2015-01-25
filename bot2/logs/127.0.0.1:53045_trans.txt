@@ -1,0 +1,4 @@
+Sat Jan 24 2015 22:53:54 GMT-0800 (PST) (user) ~emohello 
+Sat Jan 24 2015 22:53:54 GMT-0800 (PST) (bot) You, wake up! 
+Sat Jan 24 2015 22:54:02 GMT-0800 (PST) (user) help 
+Sat Jan 24 2015 22:54:02 GMT-0800 (PST) (bot) You, wake up! 

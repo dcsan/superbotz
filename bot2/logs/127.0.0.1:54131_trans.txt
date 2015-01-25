@@ -1,0 +1,6 @@
+Sun Jan 25 2015 00:11:10 GMT-0800 (PST) (user) ~emohello 
+Sun Jan 25 2015 00:11:10 GMT-0800 (PST) (bot) Yeah? Whaddaya want? says the biker. 
+Sun Jan 25 2015 00:13:57 GMT-0800 (PST) (user) talk to biker 
+Sun Jan 25 2015 00:13:57 GMT-0800 (PST) (bot) Yeah? Whaddaya want? says the biker. 
+Sun Jan 25 2015 00:14:16 GMT-0800 (PST) (user) go street 
+Sun Jan 25 2015 00:14:16 GMT-0800 (PST) (bot) Yeah? Whaddaya want? says the biker. 
