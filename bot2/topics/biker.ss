@@ -9,7 +9,7 @@
   - A big biker dude. 
   - {^get(bikerAngry)} he seems angry. Better check your wallet is safe.
   - {^get(bikerAngry)} he seems pretty chill. 
-  ^ Maybe he knows where we are?
+
 
   ? (can|could) you help me
   - Whats in it for me? {topic=bikerDeal}
