@@ -6,8 +6,8 @@
   // filter example
 
   + look
-  - {^get(bikerAngry)} he seems angry. Better check your wallet is safe.
-  - {^get(bikerAngry)} he seems pretty chill. 
+  - {^dcget(bikerAngry)} he seems angry. Better check your wallet is safe.
+  - {^dcget(bikerAngry)} he seems pretty chill. 
 
 
   ? (can|could) you help me

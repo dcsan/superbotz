@@ -8,7 +8,8 @@ exports.get = function(key, cb) {
 
   // debug("getVar", key, userId);
   
-  memory.db.get({subject:key, predicate: userId}, function resultHandle(err, res){
+  memory.db.dcget({subject:key, predicate: userId}, function resultHandle(err, res){
+    console.log("get");
     if (res && res.length != 0) {
       cb(err, res[0].object);
     } else {
