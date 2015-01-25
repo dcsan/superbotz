@@ -10,7 +10,7 @@
 - Are you venting your feelings now?
 - Are you angry?
 
-+ biker
++ go * biker
 - you see a biker. {topic=biker}
 
 + look

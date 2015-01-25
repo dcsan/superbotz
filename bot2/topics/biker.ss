@@ -9,7 +9,6 @@
   - {^dcget(bikerAngry)} he seems angry. Better check your wallet is safe.
   - {^dcget(bikerAngry)} he seems pretty chill. 
 
-
   ? (can|could) you help me
   - Whats in it for me? {topic=bikerDeal}
 
