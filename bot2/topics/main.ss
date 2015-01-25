@@ -29,9 +29,9 @@
 ? where am i
 - a foreign country. people are talking a language you don't understand.
 
-? *
-- why are you asking me?
-- how should I know?
+// ? *
+// - why are you asking me?
+// - how should I know?
 
 
 + [*] (fuck|fucker|shit|damn|shut up|bitch) [*]

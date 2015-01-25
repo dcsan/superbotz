@@ -30,4 +30,5 @@ node_modules
 
 # app specific
 bot2/systemDB/*
+*/data.json
 

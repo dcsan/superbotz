@@ -1,0 +1,11 @@
+{
+  "name": "bot3",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "superscript": "latest",
+    "sfacts": "latest",
+    "debug": "~2.0.0",
+    "slack-client": "~1.2.2"
+  }
+}
