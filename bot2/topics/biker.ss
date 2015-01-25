@@ -6,7 +6,6 @@
   // filter example
 
   + look
-  - A big biker dude. 
   - {^get(bikerAngry)} he seems angry. Better check your wallet is safe.
   - {^get(bikerAngry)} he seems pretty chill. 
 
