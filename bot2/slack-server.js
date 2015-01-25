@@ -79,6 +79,7 @@ var receiveData = function(slack, bot, data) {
       }
       if (reply) {
         msgpack = {
+          type: "message",
           text: reply,
           icon_url: "http://laorquesta.mx/wp-content/uploads/2014/12/bikers-300x225.jpg",
           attachment: {
