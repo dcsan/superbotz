@@ -21,6 +21,13 @@
 
 < topic
 
+> post 
+
++ *
+- wildcard here. wassup
+
+< post
+
 // ------ ticket -----------
 
 > topic ticket includes inspector
