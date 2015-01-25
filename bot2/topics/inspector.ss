@@ -2,29 +2,32 @@
 
 > topic inspector
 
-  + askticket
-  - wheres your ticket? {topic=ticket}
+  + look
+  - the ticket inspector is looking grumpy. He might fine you.
 
   + hello
-  - dont hello me.
+  - dont hello me. {@askticket}
 
-  + * lost
-  - "you're lost??! well, that's not my problem."
+  + [i am] lost
+  - you're lost??! well, that's not my problem.
 
-  ? * ticket
-  - "Don't pretend. You know what I'm talking about!"
+  + * [lost] * ticket
+  - Don't pretend. You know what I'm talking about!
 
   // is there an order eg fallthru to last option?
   + huh
   - pay attention! {@askticket}
   - "hey! I'm talking to you!" {@askticket}
 
+  + askticket
+  - wheres your ticket? {topic=ticket}
+
 < topic
 
 > post 
 
-+ *
-- wildcard here. wassup
+  + *
+  - wildcard here. wassup
 
 < post
 
@@ -35,7 +38,7 @@
   + I lost [*]
   - you lost your ticket? {@getoff}
 
-  + can [you] *
+  ? can [you] *
   - What? {@getoff}
 
   + getoff

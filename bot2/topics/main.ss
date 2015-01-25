@@ -12,3 +12,6 @@
 
 + biker
 - you see a biker. {topic=biker}
+
++ look
+- you're lost on a train in the middle of nowhere.

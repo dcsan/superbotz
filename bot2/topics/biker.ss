@@ -6,10 +6,10 @@
   + look
   - A big scary biker. Better check your wallet is safe.
 
-  + (can|could) you help me?
+  ? (can|could) you help me
   - Whats in it for me? {topic=bikerDeal}
 
-  + can you (*)
+  ? can you (*)
   - Why should I <cap>?
 
 < topic

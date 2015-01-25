@@ -29,10 +29,10 @@ var botHandle = function(err, bot) {
       // console.log("bot:", bot)
 
       msg = {
-        reply: reply,
+        reply: reply
       }
 
-      if (bot.scope.user) {
+      if (bot.scope.user) {   // sometimes this is undefined
         msg.currentTopic = bot.scope.user.currentTopic
         msg.pendingTopic = bot.scope.user.pendingTopic
       }
