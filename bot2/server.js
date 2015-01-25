@@ -30,8 +30,11 @@ var botHandle = function(err, bot) {
 
       msg = {
         reply: reply,
-        topic: bot.scope.user.pendingTopic,
-        user: bot.scope.user
+      }
+
+      if (bot.scope.user) {
+        msg.currentTopic = bot.scope.user.currentTopic
+        msg.pendingTopic = bot.scope.user.pendingTopic
       }
 
       console.log(reply + "\n");
