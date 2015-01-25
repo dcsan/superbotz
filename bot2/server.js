@@ -27,35 +27,35 @@ var botHandle = function(err, bot) {
       var i = sockets.indexOf(socket);
       var soc = sockets[i];
 
-      // console.log("reply:", reply)
-      // console.log("bot:", bot)
+      console.log("reply:", reply)
+      console.log("bot:", bot)
 
       msg = {
         reply: reply,
         message: bot.scope.message.raw
       }
 
-      if (bot.scope.user) {   // sometimes this is undefined
-        // console.log(bot.scope.user)
-        msg.currentTopic = bot.scope.user.currentTopic
-        msg.pendingTopic = bot.scope.user.pendingTopic
-        msg.memory = bot.scope.user.memory
-      }
+      // if (bot.scope.user) {   // sometimes this is undefined
+      //   // console.log(bot.scope.user)
+      //   msg.currentTopic = bot.scope.user.currentTopic
+      //   msg.pendingTopic = bot.scope.user.pendingTopic
+      //   msg.memory = bot.scope.user.memory
+      // }
 
-      if (msg.currentTopic != lastTopic) {
-        msg.newTopic = true;
-        lastTopic = msg.currentTopic;
-        console.log("newTopic:", msg.currentTopic);
-      } else {
-        msg.newTopic = false;
-      }
+      // if (msg.currentTopic != lastTopic) {
+      //   msg.newTopic = true;
+      //   lastTopic = msg.currentTopic;
+      //   console.log("newTopic:", msg.currentTopic);
+      // } else {
+      //   msg.newTopic = false;
+      // }
 
       console.log(reply + "\n");
       console.log("msg", msg);
 
-      soc.write(JSON.stringify(msg) + "\n")
-      // soc.write("\nBot> " + reply + "\n");
-      // soc.write("You> ");
+      // soc.write(JSON.stringify(msg) + "\n")
+      soc.write("\nBot> " + reply + "\n");
+      soc.write("You> ");
 
     });
   }
