@@ -31,10 +31,12 @@ var botHandle = function(err, bot) {
       // console.log("bot:", bot)
 
       msg = {
-        reply: reply
+        reply: reply,
+        message: bot.scope.message.raw
       }
 
       if (bot.scope.user) {   // sometimes this is undefined
+        // console.log(bot.scope.user)
         msg.currentTopic = bot.scope.user.currentTopic
         msg.pendingTopic = bot.scope.user.pendingTopic
         msg.memory = bot.scope.user.memory
@@ -47,7 +49,6 @@ var botHandle = function(err, bot) {
       } else {
         msg.newTopic = false;
       }
-
 
       console.log(reply + "\n");
       console.log("msg", msg);
@@ -90,7 +91,7 @@ var botHandle = function(err, bot) {
       receiveData(socket, bot, data);
     });
 
-    // Handle disconnects.
+    // Handle disconnects
     socket.on('end', function() {
       closeSocket(socket, bot);
     });

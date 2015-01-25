@@ -2,8 +2,12 @@
 
 > topic inspector
 
+  + intro
+  - [cap] A ticket inspector is looming over you.
+  ^ {@look}
+
   + look
-  - the ticket inspector is looking grumpy. He might fine you.
+  - The ticket inspector is looking grumpy. He might fine you.
 
   + hello
   - dont hello me. {@askticket}

@@ -1,5 +1,12 @@
-+ hi
+
++ go start
+- You wake up on a train in the middle of nowhere {topic=random}
+
++ (hi|hello)
 - You, wake up! {topic=inspector}
+
+? where am i
+- a foreign country. people are talking a language you don't understand.
 
 ? *
 - why are you asking me?
@@ -15,3 +22,4 @@
 
 + look
 - you're lost on a train in the middle of nowhere.
+
