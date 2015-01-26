@@ -88,6 +88,7 @@ var receiveData = function(slack, bot, data) {
             "title_link": "http://superscriptjs.com/starter/quickstart"
           }
         }
+        // around here
         channel.send(JSON.stringify(msgpack))
         // channel.send(msgpack)
 
