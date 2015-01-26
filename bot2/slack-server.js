@@ -1,8 +1,54 @@
+var request = require('request');
+
+
 
 
 // Auth Token - You can generate your token from 
 // https://<slack_name>.slack.com/services/new/bot
-var token = "xoxb-3513171784-Z3Ft95Nwzjlucm05fz9jRG6F";
+var userToken = "xoxp-2662813184-2662813192-3515247556-1b2065"
+var dcToken = "xoxp-2662813184-2662813192-3513310443-0d8242";   
+
+// egram
+var token = "xoxp-2662813184-3515663524-3515664302-b8a82e";
+
+var att1 = {
+  "color": "#36a64f",
+  "title": "drifter bot",
+  "title_link": "http://superscriptjs.com/starter/quickstart",
+
+  "fallback": "Required plain-text summary of the attachment.",
+
+  "color": "#36a64f",
+
+  "pretext": "Optional text that appears above the attachment block",
+
+  "author_name": "Bobby Tables",
+  "author_link": "http://flickr.com/bobby/",
+  "author_icon": "http://flickr.com/icons/bobby.jpg",
+
+  "title": "Slack API Documentation",
+  "title_link": "https://api.slack.com/",
+
+  "text": "Optional text that appears within the attachment",
+
+  "fields": [
+      {
+          "title": "Priority",
+          "value": "High",
+          "short": false
+      }
+  ]
+
+}
+
+
+var att2 = {
+  "title": "*Title*",
+  "fallback": "Title: testing *right now!*",
+  "text": "Testing *right now!*",
+
+  "mrkdwn_in": ["text", "title", "fallback"]
+}
 
 // This is the main Bot interface
 var superscript = require("superscript");
@@ -14,14 +60,11 @@ var debug = require('debug')("Slack Client");
 var facts = require("sfacts");
 var factSystem = facts.explore("botfacts");
 
-var LURKMODE = true;  // reply to all messages on the channel not just DMs
-
 
 // How should we reply to the user? 
 // direct - sents a DM
 // atReply - sents a channel message with @username
 // public sends a channel reply with no username
-// var replyType = "atReply"; 
 var replyType = "public"; 
 
 var atReplyRE = /<@(.*?)>/;
@@ -60,9 +103,9 @@ var receiveData = function(slack, bot, data) {
   var message = "" + messageData.text.trim();
   
   var match = message.match(atReplyRE)
-
+  
   // Are they talking to us?
-  if (match && match[1] === slack.self.id || LURKMODE) {
+  if (match && match[1] === slack.self.id) {
 
     bot.reply(user.name, message, function(err, reply){
       // We reply back direcly to the user
@@ -72,36 +115,62 @@ var receiveData = function(slack, bot, data) {
           channel = slack.getChannelGroupOrDMByName(user.name);
           break;
         case "atReply": 
-          reply = "@" + user.name  + " " + reply;
+          reply = "@" + user.name  + " " + reply.string;
         case "public":
           channel = slack.getChannelGroupOrDMByID(messageData.channel);
           break
 
       }
       if (reply) {
-        msgpack = {
-          type: "message",
-          text: reply,
-          icon_url: "http://laorquesta.mx/wp-content/uploads/2014/12/bikers-300x225.jpg",
-          attachment: {
-            "color": "#36a64f",
-            "title": "drifter bot",
-            "title_link": "http://superscriptjs.com/starter/quickstart"
-          }
-        }
-        // console.log("reply is a ", typeof(reply))
-        console.warn("msgpack:", msgpack);
-        // channel.send(msgpack);
-        channel.send(reply);
-      }
 
+        // msgpack = {
+        //   type: "message",
+        //   text: (reply.string || "EMPTY MESSAGE"),
+        //   icon_url: "http://laorquesta.mx/wp-content/uploads/2014/12/bikers-300x225.jpg",
+        //   attachments: [testAttachment]
+        // }
+        // console.log("msgpack:", msgpack)
+        // channel.sendMessage(msgpack)
+
+        imageUrl = "http://www.claimfame.com/content/uploads/2014/07/Biker-Dude-iStock-680x4521.jpg"
+
+        htmlText = "<img src='" + imageUrl + "' />";
+
+        var params = {
+          icon_emoji: ":chart_with_upwards_trend:",
+          channel: channel.id,
+          // type: "message",
+          color: "#7CD197",
+          text: htmlText,
+          // text: (reply.string || "EMPTY MESSAGE"),
+          token: token,
+          // attachments: [att2]
+        };
+
+        console.log("params", params);
+        // slack._apiCall("chat.postMessage", params, function(err, res){
+        //   // not actually err, res - looks like one param passed only:
+        //   // { ok: true, channel: 'C03F38ZCN', ts: '1422257778.000253' }
+        //   console.error("postMessage result:", err, res)
+        // })
+
+        request.post({
+          url: 'https://slack.com/api/chat.postMessage',
+          form: params 
+        }, function(err, res, body){
+          console.log("slackImg err, res, body", err, res);
+        })
+
+      }
+        
     });
 
   } else if (messageData.channel[0] == "D") {
+    // direct message
     bot.reply(user.name, message, function(err, reply){
       channel = slack.getChannelGroupOrDMByName(user.name);
-      if (reply) {
-        channel.send(reply);
+      if (reply.string) {
+        channel.send(reply.string);
       }
     });
   } else {
