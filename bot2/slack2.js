@@ -80,7 +80,7 @@ var receiveData = function(slack, bot, data) {
         // channel.send(reply.string);
 
         msgpack = {
-          type: "message",
+          type: "attachment",
           text: (reply.string || "EMPTY MESSAGE"),
           icon_url: "http://laorquesta.mx/wp-content/uploads/2014/12/bikers-300x225.jpg",
 
@@ -121,6 +121,7 @@ var receiveData = function(slack, bot, data) {
 
         // channel.sendMessage(JSON.stringify(msgpack))
         channel.sendMessage(msgpack)
+        // channel._apiCall(msgpack);
 
       }
         
