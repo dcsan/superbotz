@@ -1,8 +1,9 @@
 > topic backpack
 
   + look
-  - ^hasItem(wrench, true) you have a wrench
-  - ^hasItem(sandwich, true) a moldy old sandwich
+  - {^hasItem(wrench, true)} you have a wrench
+  - {^hasItem(sandwich, true)} a moldy old sandwich
+  ^ thats your stuff.
 
   + get wrench
   - ^save(wrench, true)

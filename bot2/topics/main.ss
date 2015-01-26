@@ -10,10 +10,18 @@
   + (go|talk) [to] drifter
   - {topic=drifter}
 
+  + [go|open] backpack
+  - You open your backpack. ^topicRedirect(backpack, look)
+
   + status
   - topic is:
   ^ ^getTopic()
 
+  + reset
+  ^ resetting...
+  ^ ^save(wrench, true)
+  ^ ^save(sandwich, true)
+  ^ reset all your stuff. {@status}
 
 < pre
 
