@@ -20,7 +20,7 @@ var factSystem = facts.explore("botfacts");
 // direct - sents a DM
 // atReply - sents a channel message with @username
 // public sends a channel reply with no username
-var replyType = "atReply"; 
+var replyType = "public"; 
 
 var atReplyRE = /<@(.*?)>/;
 var options = {};
@@ -77,7 +77,20 @@ var receiveData = function(slack, bot, data) {
 
       }
       if (reply) {
-        channel.send(reply.string);
+        // channel.send(reply.string);
+        msgpack = {
+          type: "message",
+          text: reply.string,
+          icon_url: "http://laorquesta.mx/wp-content/uploads/2014/12/bikers-300x225.jpg",
+          attachment: {
+            "color": "#36a64f",
+            "title": "drifter bot",
+            "title_link": "http://superscriptjs.com/starter/quickstart"
+          }
+        }
+        channel.send(JSON.stringify(msgpack))
+        // channel.send(msgpack)
+
       }
         
     });

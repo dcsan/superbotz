@@ -23,6 +23,11 @@
   ^ ^save(sandwich, true)
   ^ reset all your stuff. {@status}
 
+  + pictest
+  - ^addMessageProp("field", "value") adding
+  ^ this is a picture
+
+
 < pre
 
 
