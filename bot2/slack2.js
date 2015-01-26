@@ -78,9 +78,10 @@ var receiveData = function(slack, bot, data) {
       }
       if (reply) {
         // channel.send(reply.string);
+
         msgpack = {
           type: "message",
-          text: reply.string,
+          text: (reply.string || "EMPTY MESSAGE"),
           icon_url: "http://laorquesta.mx/wp-content/uploads/2014/12/bikers-300x225.jpg",
           attachment: {
             "color": "#36a64f",
@@ -88,10 +89,13 @@ var receiveData = function(slack, bot, data) {
             "title_link": "http://superscriptjs.com/starter/quickstart"
           }
         }
+        // msgpack.text = "FIXED TEXT";
         // around here
-        console.log("full reply:", reply)
-        channel.send(JSON.stringify(msgpack))
-        // channel.send(msgpack)
+        console.log("msgpack:", msgpack)
+        console.warn(channel);
+
+        // channel.sendMessage(JSON.stringify(msgpack))
+        channel.sendMessage(msgpack)
 
       }
         
