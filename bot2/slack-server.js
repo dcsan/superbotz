@@ -122,41 +122,43 @@ var receiveData = function(slack, bot, data) {
 
       }
       if (reply) {
-
-        // msgpack = {
-        //   type: "message",
-        //   text: (reply.string || "EMPTY MESSAGE"),
-        //   icon_url: "http://laorquesta.mx/wp-content/uploads/2014/12/bikers-300x225.jpg",
-        //   attachments: [testAttachment]
-        // }
-        // console.log("msgpack:", msgpack)
+        console.log('reply', reply)
+        msgpack = {
+          type: "message",
+          text: (reply.string || "EMPTY MESSAGE"),
+          icon_url: "http://lorempixel.com/48/48/",
+          // attachments: [testAttachment]
+        }
+        console.log("msgpack:", msgpack)
         // channel.sendMessage(msgpack)
 
-        imageUrl = "http://www.claimfame.com/content/uploads/2014/07/Biker-Dude-iStock-680x4521.jpg"
+        // imageUrl = "http://www.claimfame.com/content/uploads/2014/07/Biker-Dude-iStock-680x4521.jpg"
+        // htmlText = "<img src='" + imageUrl + "' />";
+        // var params = {
+        //   icon_emoji: ":chart_with_upwards_trend:",
+        //   channel: channel.id,
+        //   // type: "message",
+        //   color: "#7CD197",
+        //   text: htmlText,
+        //   // text: (reply.string || "EMPTY MESSAGE"),
+        //   token: token,
+        //   // attachments: [att2]
+        // };
 
-        htmlText = "<img src='" + imageUrl + "' />";
 
-        var params = {
-          icon_emoji: ":chart_with_upwards_trend:",
-          channel: channel.id,
-          // type: "message",
-          color: "#7CD197",
-          text: htmlText,
-          // text: (reply.string || "EMPTY MESSAGE"),
-          token: token,
-          // attachments: [att2]
-        };
+        // console.log("params", params);
+        // // slack._apiCall("chat.postMessage", params, function(err, res){
+        // //   // not actually err, res - looks like one param passed only:
+        // //   // { ok: true, channel: 'C03F38ZCN', ts: '1422257778.000253' }
+        // //   console.error("postMessage result:", err, res)
+        // // })
 
-        console.log("params", params);
-        // slack._apiCall("chat.postMessage", params, function(err, res){
-        //   // not actually err, res - looks like one param passed only:
-        //   // { ok: true, channel: 'C03F38ZCN', ts: '1422257778.000253' }
-        //   console.error("postMessage result:", err, res)
-        // })
+        msgpack.token = token
+        msgpack.channel = channel.id
 
         request.post({
           url: 'https://slack.com/api/chat.postMessage',
-          form: params 
+          form: msgpack 
         }, function(err, res, body){
           console.log("slackImg err, res, body", err, res);
         })
