@@ -23,9 +23,10 @@
   ^ ^save(sandwich, true)
   ^ reset all your stuff. {@status}
 
+  // test of message properties
   + pictest
-  - ^addMessageProp("field", "value") adding
-  ^ this is a picture
+  - ^addMessageProp("propName", "propVal") settings properties propName to propVal
+  ^ check it out.
 
 
 < pre

@@ -89,6 +89,7 @@ var receiveData = function(slack, bot, data) {
           }
         }
         // around here
+        console.log("full reply:", reply)
         channel.send(JSON.stringify(msgpack))
         // channel.send(msgpack)
 
@@ -97,6 +98,7 @@ var receiveData = function(slack, bot, data) {
     });
 
   } else if (messageData.channel[0] == "D") {
+    // direct message
     bot.reply(user.name, message, function(err, reply){
       channel = slack.getChannelGroupOrDMByName(user.name);
       if (reply.string) {

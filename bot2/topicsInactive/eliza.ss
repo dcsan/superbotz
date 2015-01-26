@@ -1,4 +1,4 @@
-// A generic set of chatting responses. This set mimicks the classic Eliza bot.
+A generic set of chatting responses. This set mimicks the classic Eliza bot.
 
 > topic eliza
 
