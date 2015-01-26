@@ -35,3 +35,12 @@ exports.getBool = function(key, bool, cb) {
     }
   });
 }
+
+
+
+exports.getTopic = function(cb) {
+  var topic = this.user.currentTopic;
+  console.log("getTopic", topic);
+  cb(null, topic)
+}
+

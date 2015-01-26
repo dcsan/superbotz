@@ -5,12 +5,15 @@
 
   + description
   - A dark and eery street. A streetlamp flickers.
-  ^ "There's a man messing with his bike, and a homeless guy"
+  ^ "There's a man messing with his bike, and a drifter"
 
   + (talk|ask) [to][the] biker
   - you approach the biker. {topic=biker}
 
   + (who|look)
   - you look around {@description}
+
+  + get sandwich
+  - ^save(sandwich, true) you pick up the sandwich.
 
 < topic

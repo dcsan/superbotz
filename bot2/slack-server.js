@@ -14,6 +14,8 @@ var debug = require('debug')("Slack Client");
 var facts = require("sfacts");
 var factSystem = facts.explore("botfacts");
 
+var LURKMODE = true;  // reply to all messages on the channel not just DMs
+
 
 // How should we reply to the user? 
 // direct - sents a DM
@@ -58,7 +60,6 @@ var receiveData = function(slack, bot, data) {
   var message = "" + messageData.text.trim();
   
   var match = message.match(atReplyRE)
-  var LURKMODE = true;  // reply to all
 
   // Are they talking to us?
   if (match && match[1] === slack.self.id || LURKMODE) {
@@ -90,7 +91,8 @@ var receiveData = function(slack, bot, data) {
         }
         // console.log("reply is a ", typeof(reply))
         console.warn("msgpack:", msgpack);
-        channel.send(msgpack);
+        // channel.send(msgpack);
+        channel.send(reply);
       }
 
     });

@@ -1,23 +1,35 @@
 // pre runs first to catch any "go" change topic commands
 
 > pre
-  + (go|talk to) biker
-  - {topic=biker} {@look}
+  + (go|talk) [to] biker
+  - you go talk to the biker. {topic=biker} {@look}
 
-  + (go|talk to) street
+  + (go|talk) [to] street
   - {topic=street}
 
-  + (go|talk to) drifter
+  + (go|talk) [to] drifter
   - {topic=drifter}
+
+  + status
+  - topic is:
+  ^ ^getTopic()
+
+
 < pre
 
 
-> post 
+// > post 
 
-  + *
-  - wildcard here. wassup
+//   + *
+//   - wildcard here. wassup
 
-< post
+// < post
+
+// random
+
++ topic
+- we were talking about: 
+^ ^getTopic()
 
 
 + go start

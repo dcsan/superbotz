@@ -12,8 +12,9 @@
   + pic
   - <img src="http://laorquesta.mx/wp-content/uploads/2014/12/bikers-300x225.jpg"/>
 
-  + (hi|hello)
-  - what do you want? {@look}
+  + ~emohello
+  - I'm hungry. Got any food?
+  // - what do you want? {@look}
 
   ? (can|could) you help me
   - Whats in it for me? {topic=bikerDeal}
@@ -24,25 +25,31 @@
   ? can you (*)
   - Why should I <cap>?
 
-  + punch
+  + punch *
   - ^save(bikerAngry, true) he punches you back
-  ^ {@look}
+  // ^ {@look}
 
-  + (punch|hit|kick|bite) biker
+  + (punch|hit|kick|bite|fist) biker
   // - {@punch}
   - ^save(bikerAngry, true) he punches you back {@look}
 
   + give [biker] [a] (*)
   - ^save(bikerAngry, false) Thanks for the <cap> man! {@look}
 
-  + kiss [biker] (*)
+  + (kiss|hug|fist bump) [biker] (*)
   // - "Hey dont get fresh with me!" ^save(bikerAngry, true)
   - Hey dont get fresh with me 
   ^ ^save(bikerAngry, true)
   ^ {@look}
 
+  + bikerHappy
+  - so, do you need a ride? {topic=bikerDeal}
+
   + give [biker] sandwich
-  - ^save(bikerAngry, false) wow i'm really hungry, thanks!
+  - ^hasItem(sandwich, true) you give the biker a sandwich {@giveSandwich}
+
+  + giveSandwich
+  - biker: Awesome man. I was really hungry, thanks!
 
   + talk *
   - biker: what do ya want? 
@@ -57,8 +64,16 @@
 
 > topic bikerDeal
 
+  // wildcard only in this topic
+  // + ^inTopic(bikerDeal, true) *
+  // - then, no. {topic=biker}
+
   + look
   - You try and make a deal with the biker.
+
+
+  + yes
+  - ok. 
 
 < topic
 
