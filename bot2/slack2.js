@@ -83,16 +83,41 @@ var receiveData = function(slack, bot, data) {
           type: "message",
           text: (reply.string || "EMPTY MESSAGE"),
           icon_url: "http://laorquesta.mx/wp-content/uploads/2014/12/bikers-300x225.jpg",
+
           attachment: {
             "color": "#36a64f",
             "title": "drifter bot",
-            "title_link": "http://superscriptjs.com/starter/quickstart"
+            "title_link": "http://superscriptjs.com/starter/quickstart",
+
+            "fallback": "Required plain-text summary of the attachment.",
+
+            "color": "#36a64f",
+
+            "pretext": "Optional text that appears above the attachment block",
+
+            "author_name": "Bobby Tables",
+            "author_link": "http://flickr.com/bobby/",
+            "author_icon": "http://flickr.com/icons/bobby.jpg",
+
+            "title": "Slack API Documentation",
+            "title_link": "https://api.slack.com/",
+
+            "text": "Optional text that appears within the attachment",
+
+            "fields": [
+                {
+                    "title": "Priority",
+                    "value": "High",
+                    "short": false
+                }
+            ]
+
           }
         }
         // msgpack.text = "FIXED TEXT";
         // around here
         console.log("msgpack:", msgpack)
-        console.warn(channel);
+        // console.warn(channel);
 
         // channel.sendMessage(JSON.stringify(msgpack))
         channel.sendMessage(msgpack)
